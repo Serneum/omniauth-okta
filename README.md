@@ -33,7 +33,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       site:          'https://your-org.okta.com',
       authorize_url: 'https://your-org.okta.com/oauth2/v1/authorize',
       token_url:     'https://your-org.okta.com/oauth2/v1/token'
-    }
+    },
+    auth_server_id: 'default'
   }
 end
 ```
@@ -60,7 +61,8 @@ or add options like the following:
                     :site =>          'https://your-org.okta.com',
                     :authorize_url => 'https://your-org.okta.com/oauth2/v1/authorize',
                     :token_url =>     'https://your-org.okta.com/oauth2/v1/token'
-                  }
+                  },
+                  :auth_server_id => 'default',
                   :strategy_class => OmniAuth::Strategies::Okta)
 ```
 
